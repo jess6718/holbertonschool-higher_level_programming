@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-for number in range(0, 100):
-    if number < 99:
-        print("{:02}, ".format(number), end="")
+for value in range (0, 100):
+    if value <= 98:
+        print("{:02d}, ".format(value), end="")
     else:
-        print("{:02}".format(number))
+        print("{:02d}".format(value))
