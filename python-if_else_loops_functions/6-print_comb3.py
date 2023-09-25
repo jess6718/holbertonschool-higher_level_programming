@@ -6,6 +6,6 @@ while i < 8:
     while j <= 9:
         print("{0}".format(i), end="")
         print("{0}, ".format(j), end="")
-        j = j + 1;
+        j = j + 1
     i = i + 1
 print("89")
