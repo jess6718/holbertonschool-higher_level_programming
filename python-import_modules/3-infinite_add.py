@@ -8,4 +8,4 @@ if __name__ == '__main__':
     while i <= arg_c:
         total = total + int(sys.argv[i])
         i = i + 1
-    print("f{total}")
+    print(f"{total}")
