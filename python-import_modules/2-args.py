@@ -8,8 +8,8 @@ if __name__ == '__main__':
     elif arg_c == 1:
         print("{} argument:".format(arg_c))
     else:
-        print("{} argument.".format(arg_c))
+        print("{} arguments.".format(arg_c))
     i = 1
-    while i <= arg_c and arg_c > 0:
+    while i <= arg_c:
         print("{}: {}".format(i, sys.argv[i]))
         i = i + 1
