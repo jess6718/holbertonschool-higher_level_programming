@@ -1,12 +1,14 @@
 #!/usr/bin/python3
 def divisible_by_2(my_list=[]):
-    check_empty(my_list)
+    if check_none_val(my_list):
+        return None
     return enrich_new_list(my_list)
 
 
-def check_empty(test_list):
-    if test_list is None or len(test_list) == 0:
-        return None
+def check_none_val(my_list):
+    if my_list is None or len(my_list) == 0:
+        return True
+    return False
 
 
 def enrich_new_list(old_list):
