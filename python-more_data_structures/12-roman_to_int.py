@@ -3,7 +3,7 @@ def roman_to_int(roman_string):
     if roman_string is None or not isinstance(roman_string, str):
         return 0
 
-    roamn_dict = {
+    roman_dict = {
         "I": 1,
         "V": 5,
         "X": 10,
@@ -16,9 +16,8 @@ def roman_to_int(roman_string):
     total = 0
     pre_val = 0
 
-    # if letter in str cannot be found in dictionary
     for i in reversed(roman_string):
-        current_val = roamn_dict[i]
+        current_val = roman_dict[i]
 
         if current_val >= pre_val:
             total += current_val
