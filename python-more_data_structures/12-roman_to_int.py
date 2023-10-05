@@ -1,5 +1,8 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
+    if roman_string is None or not isinstance(roman_string, str):
+        return 0
+
     roamn_dict = {
         "I" : 1,
         "V" : 5,
@@ -9,10 +12,6 @@ def roman_to_int(roman_string):
         "D" : 500,
         "M" : 1000
         }
-    if roman_string is None or len(roman_string) == 0:
-        return 0
-    if not isinstance(roman_string, str):
-        return 0
     
     total = 0
     pre_val = 0
