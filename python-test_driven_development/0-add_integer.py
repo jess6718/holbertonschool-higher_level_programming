@@ -5,7 +5,6 @@
 def add_integer(a, b=98):
     """Adding edge cases"""
 
-    
     if not isinstance(a, int):
         if not isinstance(a, float):
             raise TypeError("a must be an integer")
