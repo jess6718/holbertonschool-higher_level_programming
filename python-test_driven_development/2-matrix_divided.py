@@ -1,5 +1,10 @@
 #!/usr/bin/python3
+"""Divides all elements of a matrix"""
+
+
 def matrix_divided(matrix, div):
+    """Function devides all elemens by a matrix"""
+
     if not isinstance(div, (int, float)):
         raise TypeError("div must be a number")
     if div == 0:
