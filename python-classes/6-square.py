@@ -1,30 +1,22 @@
-"""
-A class Square that defines a square
-by a private instance attribute of size
-"""
+#!/usr/bin/python3
+"""a class that defines a square"""
 
 
 class Square:
     """
-    Contains a private instance attribute of size with conditions
+    Represents a square.
 
     Attributes:
-        size (int): size of the square
-    Methods:
-        __init__(self, size=0): Initialises a new instance of a square
-        size(self): Retrives itself
-        size(self, value): Determines if input size if a suitable integer
-        area(self): Determines the area of the square
-        my_print(self): Prints a square with a given size
+    size (int): the size of the square
+    position (int): the position of the square
     """
     def __init__(self, size=0, position=(0, 0)):
         """
-        Initialises a new square instance
+        initialises an instance of Square
 
-        Arguments:
-        size (int): The size of the square, set to 0 by default
-        position (int): The position of the square
-        must be a tuple of 2 positive integers
+        Args:
+            size (int, optional): the size of a square. Defaults to 0
+            position (tuple, optional): the position of the square.
         """
         self.size = size
         self.position = position
