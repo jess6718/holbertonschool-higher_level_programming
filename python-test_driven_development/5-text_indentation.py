@@ -13,8 +13,8 @@ def text_indentation(text):
 
     for i in text:
         if i == " " and space_post_chr is True:
-            space_post_chr = False
             continue
+        space_post_chr = False
         print(i, end="")
         if i in chr_list:
             space_post_chr = True
