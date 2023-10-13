@@ -42,4 +42,9 @@ Now use it:
     ...
     TypeError: last_name must be a string
 
+    Negative print no name passed in:
+    >>> say_my_name()
+    Traceback (most recent call last):
+    ...
+    TypeError: 'tuple' object is not callable
     
