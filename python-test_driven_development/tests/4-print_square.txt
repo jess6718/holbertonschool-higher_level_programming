@@ -47,3 +47,9 @@ Now use it:
     Traceback (most recent call last):
     ...
     TypeError: size must be an integer
+
+    Negative size is empty:
+    >>> print_square()
+    Traceback (most recent call last):
+    ...
+    TypeError: print_square() missing 1 required positional argument: 'size'
