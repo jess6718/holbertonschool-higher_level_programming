@@ -1,0 +1,45 @@
+The ``say_my_name`` module
+======================
+
+Using ``say_my_name``
+-------------------
+
+
+Import ``say_my_name``:
+
+     >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Now use it:
+    Basic print name:
+    >>> say_my_name("Pikachu", "Bulbasaur")
+    My name is Pikachu Bulbasaur
+
+    Positive print no last name:
+    >>> say_my_name("Pikachu")
+    My name is Pikachu 
+
+    Negative print first name:
+    >>> say_my_name(7, "Bulbasaur")
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string
+
+    Negative print empty first name:
+    >>> say_my_name(None, "Bulbasaur")
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string
+
+    Negative print last name:
+    >>> say_my_name("Pikachu", 777)
+    Traceback (most recent call last):
+    ...
+    TypeError: last_name must be a string
+
+    Negative print empty last name:
+    >>> say_my_name("Pikachu", None)
+    Traceback (most recent call last):
+    ...
+    TypeError: last_name must be a string
+
+    
