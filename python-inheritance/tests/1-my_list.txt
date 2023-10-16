@@ -32,7 +32,7 @@ Now use it:
     >>> print(my_list)
     [-1, -11, -7]
     >>> my_list.print_sorted()
-    [-1, -7, -11]
+    [-11, -7, -1]
     >>> print(my_list)
     [-1, -11, -7]
 
@@ -44,7 +44,7 @@ Negative and positive sorting
     >>> print(my_list)
     [2, -11, -7]
     >>> my_list.print_sorted()
-    [2, -7, -11]
+    [-11, -7, 2]
     >>> print(my_list)
     [2, -11, -7]
 
