@@ -1,9 +1,11 @@
 #!/usr/bin/python3
+""" Define module"""
+
+
 def inherits_from(obj, a_class):
+    """ Definition of method of inherits_from"""
+
     if type(obj) is a_class:
         return False
 
-    if isinstance(obj.__class__, a_class.__class__.__bases__):
-        return True
-
-    return False
+    return isinstance(obj, a_class)
