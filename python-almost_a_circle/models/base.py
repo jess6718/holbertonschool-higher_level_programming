@@ -3,13 +3,12 @@
 
 
 class Base:
-    """Base class init"""
-
-    __nb_objects = 0
+    """Define Base class init function"""
+    __nb_objects = 0  # class var value is updated when instance var access it
 
     def __init__(self, id=None):
         if id is not None:
             self.id = id
         else:
-            Base.__nb_objects = Base.__nb_objects + 1
+            Base.__nb_objects += 1  # access class var
             self.id = Base.__nb_objects
