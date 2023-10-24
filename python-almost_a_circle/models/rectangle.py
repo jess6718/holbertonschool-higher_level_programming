@@ -85,8 +85,9 @@ class Rectangle(Base):
 
     def display(self):
         """define a function that print a rectangle"""
-        for i in range(self.__height):
-            print("#" * self.__width)
+        print("\n" * self.y, end="")
+        for r in range(self.height):
+            print(" " * self.x + "#" * self.width)
 
     def __str__(self):
         # self.id has been initialised in def__init__
