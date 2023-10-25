@@ -94,9 +94,16 @@ class Rectangle(Base):
         return f"[Rectangle] ({self.id}) {self.x}/{self.y} - "\
             f"{self.width}/{self.height}"
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """assign arguments"""
+        # only reach **kwargs when *args is empty
+        if len(args) == 0:
+            for k, v in kwargs.items():
+                self.__setattr__(k, v)
+            return
+
         try:
+            # calling def setter, or can also put self.__width
             self.id = args[0]
             self.width = args[1]
             self.height = args[2]
