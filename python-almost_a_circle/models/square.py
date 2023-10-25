@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-from models.rectangle import Rectangle
 """Define Sub Class square"""
+from models.rectangle import Rectangle
 
 
 class Square(Rectangle):  # inherite all attribute/var from Rectangle
