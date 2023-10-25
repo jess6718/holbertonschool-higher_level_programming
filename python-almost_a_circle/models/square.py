@@ -29,3 +29,20 @@ class Square(Rectangle):  # inherite all attribute/var from Rectangle
         # cannot put self.__width due to private, so call etter function
         self.width = value
         self.height = value
+
+    def update(self, *args, **kwargs):
+        """assign arguments"""
+        # only reach **kwargs when *args is empty
+        if len(args) == 0:
+            for key, value in kwargs.items():
+                self.__setattr__(key, value)
+            return
+
+        try:
+            # calling def setter, or can also put self.__width
+            self.id = args[0]
+            self.size = args[1]
+            self.x = args[2]
+            self.y = args[3]
+        except IndexError:
+            pass
