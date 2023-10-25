@@ -48,5 +48,7 @@ class Square(Rectangle):  # inherite all attribute/var from Rectangle
             pass
 
     def to_dictionary(self):
+        """return dictionary"""
+        
         return {"id": self.id, "size": self.width,
                 "x": self.x, "y": self.y}
