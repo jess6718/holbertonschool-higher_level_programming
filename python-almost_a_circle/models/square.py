@@ -46,3 +46,7 @@ class Square(Rectangle):  # inherite all attribute/var from Rectangle
             self.y = args[3]
         except IndexError:
             pass
+
+    def to_dictionary(self):
+        return {"id": self.id, "size": self.width,
+                "x": self.x, "y": self.y}
