@@ -30,7 +30,7 @@ class Base:
 
     @classmethod
     def save_to_file(cls, list_objs):
-        """Define a function that write object to a text file"""
+        """Function that write list object to file in Json representation"""
         file_name = cls.__name__ + ".json"
         dict_list = []
         with open(file_name, "w") as file:  # file is a var for opened file
@@ -40,3 +40,13 @@ class Base:
                 for item in list_objs:
                     dict_list.append(item.to_dictionary())
                 file.write(Base.to_json_string(dict_list))
+
+    @classmethod
+    def create(cls, **dictionary):
+        """Function that returns an instance with all attributes already set"""
+        if cls.__name__ == "Rectangle":
+            new_ins = cls(1, 1)
+        else:
+            new_ins = cls(1)
+        new_ins.update(**dictionary)
+        return new_ins
