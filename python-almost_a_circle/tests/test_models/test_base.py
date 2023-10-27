@@ -8,6 +8,7 @@ class TestBaseClass(unittest.TestCase):
     """Test methods of BassClass"""
 
     def test_init_none_id(self):
+        """Test whether incremental works none_id passed in"""
         base1 = Base()
         self.assertEqual(base1.id, 1)
         base2 = Base()
@@ -15,5 +16,6 @@ class TestBaseClass(unittest.TestCase):
         self.assertEqual(base1.id, 1)
 
     def test_init_id_passed(self):
+        """Test whether Base returns id if a number passed in"""
         base = Base(7)
         self.assertEqual(base.id, 7)
