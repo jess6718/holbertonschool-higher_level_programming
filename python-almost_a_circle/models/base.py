@@ -39,14 +39,17 @@ class Base:
                 file.write("[]")
             else:
                 for item in list_objs:
+                    # convert list instance to dict_list
                     dict_list.append(item.to_dictionary())
+                    # convert dict_list to json string
+                    # to_json_string is static, so use class to call
                 file.write(Base.to_json_string(dict_list))
 
     @classmethod
     def create(cls, **dictionary):
         """Function that returns an instance with all attributes already set"""
         if cls.__name__ == "Rectangle":
-            new_ins = cls(1, 1)
+            new_ins = cls(1, 2)
         else:
             new_ins = cls(1)
         new_ins.update(**dictionary)
@@ -61,8 +64,11 @@ class Base:
         if not os.path.exists(file_name):
             return []
         else:
+            # read Json file
             with open(file_name, "r") as file:
+                # convert Json string to list of dict
                 dict_list = cls.from_json_string(file.read())
                 for item in dict_list:
+                    #create new instance via reset value
                     list_ins.append(cls.create(**item))
         return list_ins
