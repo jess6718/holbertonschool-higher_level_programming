@@ -27,3 +27,13 @@ class TestBaseClass(unittest.TestCase):
         base2 = Base()
         self.assertEqual(base1.id, 1)
         self.assertEqual(base2.id, 2)
+
+    def test_json_string_with_none(self):
+        """Test Json string with None passed in"""
+        self.assertEqual(Base.to_json_string(None), "[]")
+
+    def test_json_string_with_dict_list(self):
+        """Test Json string with valid dict_list"""
+        list_input = [{'id': 89}, {'width': 10}]
+        self.assertEqual(Base.to_json_string(list_input),
+                        '[{"id": 89}, {"width": 10}]')
