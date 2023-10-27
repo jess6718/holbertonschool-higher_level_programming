@@ -13,6 +13,8 @@ class TestBaseClass(unittest.TestCase):
         base2 = Base()
         self.assertEqual(base2.id, 2)
         self.assertEqual(base1.id, 1)
+        self.assertNotEqual(base1.id, base2.id)
+        self.assertEqual(base1.id+1, base2.id)
 
     def test_init_id_passed(self):
         """Test whether Base returns id if a number passed in"""
