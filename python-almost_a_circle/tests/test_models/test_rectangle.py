@@ -110,6 +110,11 @@ class TestRectangle(unittest.TestCase):
         r1.update(7)
         self.assertEqual(r1.id, 7)
 
+        r2 = Rectangle(1, 2)
+        r2.update()
+        self.assertEqual(r2.width, 1)
+        self.assertEqual(r2.height, 2)
+
     def test_create(self):
         """Test create"""
 
