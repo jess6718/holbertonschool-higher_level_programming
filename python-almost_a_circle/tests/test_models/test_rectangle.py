@@ -74,5 +74,7 @@ class TestRectangle(unittest.TestCase):
 
     def test_str(self):
         """test the str method"""
-        prt_str = Rectangle(3, 4, 2, 5, 33)
-        self.assertEqual(str(prt_str), "[Rectangle] (33) 2/5 - 3/4")
+        prt_str1 = Rectangle(3, 4, 2, 5, 33)
+        self.assertEqual(str(prt_str1), "[Rectangle] (33) 2/5 - 3/4")
+        prt_str2 = Rectangle(7, 1, 0)
+        self.assertEqual(str(prt_str2), "[Rectangle] (1) 0/0 - 7/1")
