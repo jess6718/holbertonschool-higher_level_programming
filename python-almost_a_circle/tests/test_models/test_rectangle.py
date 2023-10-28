@@ -145,9 +145,6 @@ class TestRectangle(unittest.TestCase):
     def test_load_from_file(self):
         """Test load from file"""
 
-    #    result = Rectangle.load_from_file()
-    #    self.assertEqual(result, [])
-
         r1 = Rectangle(1, 2)
         r2 = Rectangle(3, 4)
         list_of_objs = [r1, r2]
