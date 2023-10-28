@@ -92,5 +92,4 @@ class TestRectangle(unittest.TestCase):
         o2 = Rectangle(2, 3, 1, 0)
         with patch('sys.stdout', new=StringIO()) as fakeOutput:
             o2.display()
-            self.assertEqual(fakeOutput.getvalue(),
-                             ' ##\n ##\n ##\n')
+            self.assertEqual(fakeOutput.getvalue(), ' ##\n ##\n ##\n')
