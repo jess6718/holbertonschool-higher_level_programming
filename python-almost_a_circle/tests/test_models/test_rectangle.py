@@ -108,3 +108,11 @@ class TestRectangle(unittest.TestCase):
         r1 = Rectangle(1, 2, 3, 4, 5)
         r1.update(7)
         self.assertEqual(r1.id, 7)
+
+    def test_create(self):
+        """Test create"""
+
+        r1 = Rectangle.create(**{'id': 3, 'width': 1, 'height': 2,
+                                 'x': 3, 'y': 4})
+        expect = "[Rectangle] (3) 3/4 - 1/2"
+        self.assertEqual(str(r1), expect)
