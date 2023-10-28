@@ -142,11 +142,11 @@ class TestRectangle(unittest.TestCase):
             self.assertEqual(t_file.read(), expect)
             os.remove("Rectangle.json")
 
-    # def test_load_from_file(self):
-    #     """Test load from file"""
+    def test_load_from_file(self):
+        """Test load from file"""
 
-    #     result = Rectangle.load_from_file()
-    #     self.assertEqual(result, [])
+        result = Rectangle.load_from_file()
+        self.assertEqual(result, [])
 
     #     r1 = Rectangle(1, 2)
     #     r2 = Rectangle(3, 4)
