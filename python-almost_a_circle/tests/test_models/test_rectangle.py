@@ -93,3 +93,11 @@ class TestRectangle(unittest.TestCase):
         with patch('sys.stdout', new=StringIO()) as fakeOutput:
             o2.display()
             self.assertEqual(fakeOutput.getvalue(), ' ##\n ##\n ##\n')
+
+    def test_to_dictionary(self):
+        """Testing to_dictionary()"""
+
+        r1 = Rectangle(1, 2, 3, 4, 5)
+        result = r1.to_dictionary()
+        self.assertEqual(result, {"id": 5, "width": 1, "height": 2,
+                                  "x": 3, "y": 4})
