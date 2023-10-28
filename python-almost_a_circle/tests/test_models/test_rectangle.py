@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Module for testing Rectangle class"""
 import unittest
+import os
 from io import StringIO
 from unittest.mock import patch
 from models.base import Base
@@ -116,3 +117,22 @@ class TestRectangle(unittest.TestCase):
                                  'x': 3, 'y': 4})
         expect = "[Rectangle] (3) 3/4 - 1/2"
         self.assertEqual(str(r1), expect)
+
+    def test_save_to_file(self):
+        """Test save to file"""
+
+        Rectangle.save_to_file(None)
+        with open("Rectangle.json", "r") as t_file:
+            self.assertEqual(t_file.read(), "[]")
+            os.remove("Rectangle.json")
+
+        Rectangle.save_to_file([])
+        with open("Rectangle.json", "r") as t_file:
+            self.assertEqual(t_file.read(), "[]")
+            os.remove("Rectangle.json")
+
+        Rectangle.save_to_file([Rectangle(1, 2)])
+        with open("Rectangle.json", "r") as t_file:
+            expect = '[{"id": 1, "width": 1, "height": 2, "x": 0, "y": 0}]'
+            self.assertEqual(t_file.read(), expect)
+            os.remove("Rectangle.json")
