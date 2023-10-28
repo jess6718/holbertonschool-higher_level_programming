@@ -32,8 +32,12 @@ class TestBaseClass(unittest.TestCase):
         """Test Json string with None passed in"""
         self.assertEqual(Base.to_json_string(None), "[]")
 
+    def test_json_string_with_empty_list(self):
+        """Test Json string with None passed in"""
+        self.assertEqual(Base.to_json_string([]), "[]")
+
     def test_json_string_with_dict_list(self):
         """Test Json string with valid dict_list"""
         list_input = [{'id': 89}, {'width': 10}]
         self.assertEqual(Base.to_json_string(list_input),
-                        '[{"id": 89}, {"width": 10}]')
+                         '[{"id": 89}, {"width": 10}]')
