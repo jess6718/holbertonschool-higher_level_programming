@@ -69,6 +69,6 @@ class Base:
                 # convert Json string to list of dict
                 dict_list = cls.from_json_string(file.read())
                 for item in dict_list:
-                    #create new instance via reset value
+                    # create new instance via reset value
                     list_ins.append(cls.create(**item))
         return list_ins
