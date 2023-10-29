@@ -61,9 +61,14 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(str(prt_str1), "[Square] (33) 4/5 - 3")
         prt_str2 = Square(3, 0)
         self.assertEqual(str(prt_str2), "[Square] (1) 0/0 - 3")
-    # def test_size(self):
+
+    def test_to_dictionary(self):
+        """Testing to_dictionary()"""
+        s1 = Square(1, 2, 3, 4)
+        result = s1.to_dictionary()
+        self.assertEqual(result, {"id": 4, "size": 1, "x": 2, "y": 3})
+
     # def test_update(self):
-    # def test_to_dictionary(self):
+    # def test_create(self):
     # def test_save_to_file(self):
     # def test_from_json(self):
-    # def test_create(self):
