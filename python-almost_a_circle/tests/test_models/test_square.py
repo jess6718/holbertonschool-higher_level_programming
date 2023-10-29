@@ -55,7 +55,12 @@ class TestSquare(unittest.TestCase):
         with self.assertRaises(ValueError):
             Square(0, 7, 7)
 
-    # def test_str_return(self):
+    def test_str(self):
+        """test the str method"""
+        prt_str1 = Square(3, 4, 5, 33)
+        self.assertEqual(str(prt_str1), "[Square] (33) 4/5 - 3")
+        prt_str2 = Square(3, 0)
+        self.assertEqual(str(prt_str2), "[Square] (1) 0/0 - 3")
     # def test_size(self):
     # def test_update(self):
     # def test_to_dictionary(self):
