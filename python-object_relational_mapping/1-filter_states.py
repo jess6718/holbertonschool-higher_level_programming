@@ -19,7 +19,7 @@ if __name__ == "__main__":
 
     # cursor object execute SQL query but not return value
     cursorObj.execute("SELECT * FROM states\
-                      WHERE name LIKE 'N%' ORDER BY id ASC")
+                      WHERE BINARY name LIKE 'N%' ORDER BY id ASC")
 
     # Fetch all the rows and display them
     myresult = cursorObj.fetchall()
