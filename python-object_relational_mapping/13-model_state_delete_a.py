@@ -28,9 +28,9 @@ if __name__ == '__main__':
     # Create a instance of Session class
     session = Session()
 
-    # Adding Louisiana instance to the session
+    # Query database for instance containing "a"
     states = session.query(State).filter(State.name.like('%a%'))
-
+    # Loop deleting instance
     for state in states:
         session.delete(state)
 
