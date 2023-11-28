@@ -28,11 +28,13 @@ if __name__ == '__main__':
     # Passing Louisiana to create a instance
     add_state = State(name='Louisiana')
 
-    # Adding  Louisiana instance to the session
+    # Adding Louisiana instance to the session
     session.add(add_state)
 
     # Committing the changes to the database
     session.commit()
+
+    print(add_state.id)
 
     # Close session
     session.close()
