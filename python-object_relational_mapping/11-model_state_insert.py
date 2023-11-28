@@ -20,7 +20,7 @@ if __name__ == '__main__':
         pool_pre_ping=True)
 
     # Create all tables in the engine
-    Base.metadata.create_all(engine)
+    Base.metadata.create_all(db_engine)
 
     # Create a configured Session class
     Session = sessionmaker(bind=db_engine)
@@ -29,7 +29,7 @@ if __name__ == '__main__':
     session = Session()
 
     # Passing Louisiana to create a instance
-    add_state = State(name='Louisiana')
+    add_state = State(name="Louisiana")
 
     # Adding Louisiana instance to the session
     session.add(add_state)
