@@ -19,6 +19,9 @@ if __name__ == '__main__':
             user, password, db_name),
         pool_pre_ping=True)
 
+    # Create all tables in the engine
+    Base.metadata.create_all(engine)
+
     # Create a configured Session class
     Session = sessionmaker(bind=db_engine)
 
